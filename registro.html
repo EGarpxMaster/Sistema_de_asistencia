@@ -1,0 +1,157 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulario para registrar un nuevo invitado a un evento de la universidad."
+    />
+    <link rel="stylesheet" href="estilos/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registrar invitado</title>
+  </head>
+  <body>
+    
+    <div class="images">
+      <!-- Imagen izquierda -->
+      <img
+        src="images/LOGO%20UNICARIBE%20BLACK.png"
+        alt="Imagen esquina izquierda"
+        class="image-top-left"
+        width="180"
+        height="auto"
+      />
+
+      <!-- Imagen derecha -->
+      <img
+        src="images/LogoIngenier%C3%ADa_Color.png"
+        alt="Imagen esquina derecha"
+        class="image-top-right"
+        width="180"
+        height="auto"
+      />
+    </div>
+    
+    <div class="form-container">
+      <form action="registrar_invitado.php" method="post" role="form">
+        <h1>Registrar nuevo invitado</h1>
+
+        <label for="nombre">Nombre completo:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          aria-label="Nombre del invitado"
+          placeholder="Apellido(s) / Nombre(s)"
+          required
+        />
+
+        <label for="correo">Correo electrónico:</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          aria-label="Correo electrónico"
+          placeholder="Correo electrónico"
+          required
+        />
+
+        <label for="telefono">Teléfono:</label>
+        <input
+          type="text"
+          id="telefono"
+          name="telefono"
+          aria-label="Teléfono"
+          placeholder="Teléfono"
+          pattern="[0-9]{10}"
+          title="Ingresa un número de teléfono de 10 dígitos"
+          required
+        />
+
+        <label for="programa">Programa educativo:</label>
+        <select
+          id="programa"
+          name="programa"
+          aria-label="Programa educativo"
+          required
+        >
+          <option value="" disabled selected>Selecciona un programa</option>
+          <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+          <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+          <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+          <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+          <option value="Ingeniería Civil">Ingeniería Civil</option>
+          <option value="Ingeniería en Tecnologías de la Información">Ingeniería en Tecnologías de la Información</option>
+        </select>
+
+        <label for="brazalete">Número de brazalete:</label>
+        <input
+          type="number"
+          id="brazalete"
+          name="brazalete"
+          aria-label="Número de brazalete"
+          min="1"
+          max="500"
+          placeholder="Número de brazalete"
+          required
+        />
+
+        <input type="submit" value="Registrar" />
+
+        <div class="btn-container">
+          <button
+            class="btn-secondary"
+            type="button"
+            onclick="location.href='asistencia.php'"
+          >
+            ¿Ya estás registrado?
+          </button>
+
+          <button
+            class="btn-secondary"
+            type="button"
+            onclick="location.href='confirmacion.php'"
+          >
+            Regresar a confirmación
+          </button>
+        </div>
+      </form>
+
+      <!-- Íconos sociales -->
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=61550645371287&mibextid=LQQJ4d"
+          target="_blank"
+          class="icon"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          aria-label="Chat on WhatsApp"
+          href="https://wa.me/529982288611"
+          target="_blank"
+          class="icon"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a
+          aria-label="Chat on WhatsApp"
+          href="https://wa.me/529983982543"
+          target="_blank"
+          class="icon"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
